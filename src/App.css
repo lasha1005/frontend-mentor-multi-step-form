@@ -1,38 +1,259 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Ubuntu;
+  src: url(../public/assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Ubuntu;
+  src: url(../public/assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: Ubuntu;
+  src: url(../public/assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: white;
+  font-family: 'Ubuntu';
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  height: 100vh;
+  background: #f3f3f3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 100%;
+}
+
+.side-bar {
+  width: 97%;
+  height: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url('../public/assets/images/bg-sidebar-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 40px;
+}
+
+section {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+section > .num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2.3px solid white;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+section > .current {
+  background-color: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
+}
+
+section > div > p {
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(231, 11%, 63%);
+}
+
+section > div > h4 {
+  color: white;
+  font-weight: 500;
+}
+
+main {
+  position: relative;
+  padding: 30px;
+}
+
+.info-container {
+  padding: 25px;
+  position: relative;
+}
+
+.info-container > h1 {
+  font-weight: 700;
+  color: #02295a;
+  margin-bottom: 5px;
+}
+
+.info-container > p {
+  font-weight: 500;
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 27px;
+  font-size: 16px;
+}
+
+form {
+  margin-bottom: 100px;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+.label > label {
+  font-weight: 500;
+  color: #02295a;
+}
+
+.label {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.label > p {
+  display: none;
+  font-weight: 700;
+  color: hsl(354, 84%, 57%);
+}
+
+.label > .warning {
+  border: none;
+  display: inline-block;
+  color:hsl(354, 84%, 57%);
+}
+
+div > .warning {
+  border: 1px solid red;
+}
+
+form > div > input {
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+  width: 100%;
+  margin-top: 5px;
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background: white;
+}
+
+form > div > input::placeholder {
+  font-weight: 500;
+}
+
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-step {
+  background-color: #02295a;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius:  7px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.go-back {
+  background: white;
+  color: hsl(231, 11%, 63%);
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.go-back:active {
+  color: hsl(213, 96%, 18%);
+}
+
+.next-step:active {
+  background: hsl(243, 100%, 62%);
+}
+
+@media screen and (max-width: 675px) {
+  body {
+    background: hsl(217, 100%, 97%);
   }
-  to {
-    transform: rotate(360deg);
+  .app {
+    border-radius: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
   }
+
+  main {
+    width: 100%;
+  }
+
+  .side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    width: 100vw;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    background-image: url('../public/assets/images/bg-sidebar-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: stretch;
+  }
+
+  section > div {
+    display: none;
+  }
+
+  main {
+    position: absolute;
+    top: 11%;
+    left:0;
+  }
+
+  .info-container {
+    border-radius: 15px;
+    padding: 25px;
+    background: white;
+  }
+
+  form { 
+    margin-bottom: 0;
+  }
+
+  .button-container {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: hsl(231, 100%, 99%);
+    bottom: 0;
+    left:0;
+    right: 0;
+  }
+
 }

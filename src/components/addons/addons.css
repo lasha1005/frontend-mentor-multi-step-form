@@ -1,0 +1,72 @@
+.add-ons-container {
+    width: 100%;
+    padding: 35px;
+    margin-bottom: 100px;
+}
+
+.add-ons-container > h1 {
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 10px;
+}
+
+.add-ons-container > p {
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+
+.add-on {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.add-on > input {
+    width: 30px;
+    margin-right: 8px;
+}
+
+.add-on > div {
+    margin-right: auto;
+}
+
+.add-on > p {
+    color: hsl(243, 100%, 62%);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.add-on > div > h4 {
+    font-weight: 700;
+    color:hsl(213, 96%, 18%);
+    margin-bottom: 5px;
+}
+
+.add-on > div > p {
+    color: hsl(231, 11%, 63%);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.checked {
+    border: 1px solid hsl(243, 100%, 62%);
+    background: hsl(217, 100%, 97%);
+}
+
+@media screen and (max-width:675px) {
+    .add-ons-container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 0px;
+    }
+
+    .add-ons-container > p {
+        margin-bottom: 20px;
+    }
+}

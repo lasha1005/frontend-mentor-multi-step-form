@@ -1,0 +1,163 @@
+.select-plan-container {
+    padding: 35px;
+    position: relative;
+}
+
+.select-plan-container > h1 {
+    font-weight: 700;
+    color:hsl(213, 96%, 18%);
+    margin-bottom: 10px;
+}
+
+.select-plan-container > p {
+    font-weight: 500;
+    font-size: 16px;
+    color:hsl(231, 11%, 63%);
+    margin-bottom: 30px;
+}
+
+
+.plan-container {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.plan-container > .plan {
+    width: 30%;
+    padding: 12px;
+    margin-right: 10px;
+    text-align: left;
+    border: 1px solid hsl(231, 11%, 63%);
+    background: white;
+    border-radius: 6px;
+}
+
+.plan:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+.plan_clicked {
+    border: 1px solid hsl(243, 100%, 62%) !important;
+    background: hsl(217, 100%, 97%) !important;
+}
+
+.plan > img {
+    margin-bottom: 50px;
+} 
+
+.plan > div > h3 {
+    font-weight: 700;
+    font-size: 16px;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 10px;
+}
+
+.plan > div > p {
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(231, 11%, 63%);
+    margin-bottom: 6px;
+}
+
+.discount {
+    color: hsl(243, 100%, 62%) !important;
+}
+
+.switch-container {
+    background: hsl(217, 100%, 97%);
+    width: 100%;
+    padding: 10px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+.monthly {
+    color :hsl(213, 96%, 18%);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.yearly {
+    color: hsl(231, 11%, 63%);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.switch {
+    width: 35px;
+    height: 18px;
+    background-color: #2B283A;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+.circle {
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.clicked .monthly {
+    color: hsl(231, 11%, 63%) !important;
+}
+
+.clicked .yearly {
+    color: hsl(213, 96%, 18%) !important;
+}
+
+.clicked .switch {
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 675px) {
+    .select-plan-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .select-plan-container > h1 {
+        margin-bottom: 5px;
+    }
+
+    .select-plan-container > p {
+        margin-bottom: 10px;
+    }
+
+    .plan-container {
+        margin-bottom: 15px;
+    }
+
+    .plan-container > .plan {
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .plan > img {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    
+    .plan > div > h3 {
+        margin-bottom: 3px;
+    }
+
+    .plan > div > p {
+        margin-bottom: 2px;
+    }
+
+    .switch-container {
+        margin-bottom: 0;
+    }
+}
